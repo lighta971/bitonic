@@ -1,0 +1,26 @@
+node:
+ image: lighta971/nodejs
+ ports:
+  - "80:80"
+ volumes:
+  - ../:/app
+ links:
+  - mongo
+  - mysql
+
+mongo:
+ image: dockerfile/mongodb
+ expose:
+  - "27017"
+ volumes:
+  - ../tmp/mongo:/data/db
+
+mysql:
+ command: supervisord -n
+ image: lighta971/phpmyadmin
+ expose:
+  - "3306"
+ ports:
+  - "81:80"
+ volumes:
+  - ../tmp/mysql:var/lib/mysql

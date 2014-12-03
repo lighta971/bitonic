@@ -1,0 +1,13 @@
+{
+  "name": "foo",
+  "config": {
+    "port": "5555"
+  },
+  "scripts": {
+    "start": "/usr/local/bin/forever -fw server.js"
+  },
+  "dependencies": {
+    "mysql": "^2.5.3",
+    "nconf": "^0.7.1"
+  }
+}
