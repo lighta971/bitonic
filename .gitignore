@@ -3,6 +3,8 @@
 !/tmp/mongo/.gitkeep
 !/tmp/mysql/.gitkeep
 /config.json
+/.bash_history
+/.gitconfig
 
 # Logs
 logs

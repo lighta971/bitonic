@@ -1,3 +1,5 @@
 tmp/**
 docker/**
 node_modules/**
+.git/**
+.gitignore
