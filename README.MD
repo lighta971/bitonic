@@ -75,3 +75,10 @@ http://localhost
 
 terminal: `$ docker-enter docker_node_1`
 
+
+Troubleshooting
+
+mysql can't run
+sudo ln -s /etc/apparmor.d/usr.sbin.mysqld /etc/apparmor.d/disable/
+sudo apparmor_parser -R /etc/apparmor.d/usr.sbin.mysqld
+
