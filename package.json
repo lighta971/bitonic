@@ -4,7 +4,7 @@
     "port": "5555"
   },
   "scripts": {
-    "start": "/usr/local/bin/forever -fw server.js"
+    "start": "/usr/local/bin/npm install && /usr/local/bin/forever -fw server.js"
   },
   "dependencies": {
     "mysql": "^2.5.3",
