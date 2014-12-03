@@ -36,7 +36,7 @@ Into another terminal
 `$ mysql_install_db && supervisorctl restart mysql`
 
 
-`$ mysql -uroot -e "GRANT ALL PRIVILEGES ON *.* TO 'dev'@'%' IDENTIFIED BY '' WITH GRANT OPTION; FLUSH PRIVILEGES;"`
+`$ mysql -uroot -e "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '' WITH GRANT OPTION; FLUSH PRIVILEGES;"`
 
 
 Finaly
