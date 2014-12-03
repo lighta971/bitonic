@@ -5,8 +5,11 @@ Bitonic - La Nuit de l'info Team :D
 Installation
 -------------
 **Requirements:**
+
 Install FIG at fig.sh
+
 install docker
+
 install docker-enter
 
 Get source
