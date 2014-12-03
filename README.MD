@@ -25,27 +25,18 @@ Create data directory for mongo & mysql
 
 Install MYSQL
 
-`$ cd docker && fig run mysql`
+`$ cd docker && fig up`
 
 
-`$ docker-enter docker_mysql_run_1`
+Into another terminal
+
+`$ docker-enter docker_mysql_1`
 
 
 `$ mysql_install_db && supervisorctl restart mysql`
 
 
-
-Install root user
-
- - Go to localhost:81/phpmyadmin (root - empty password)
-
- - Click on SQL and copy paste:
-
- `GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' 
-    IDENTIFIED BY '' 
-    WITH GRANT OPTION;
-FLUSH PRIVILEGES;`
-
+`$ mysql -uroot -e "GRANT ALL PRIVILEGES ON *.* TO 'dev'@'%' IDENTIFIED BY '' WITH GRANT OPTION; FLUSH PRIVILEGES;"`
 
 
 Finaly
@@ -54,14 +45,11 @@ Finaly
 
 Enable configuration file
 
-`$ cd ../ && cp config.json.sample config.json`
-
-Run application
-
-` $ fig up`
+`$ cd repository && cp config.json.sample config.json`
 
 
-
+Usages
+-------------------------
 
 Mysql
 
@@ -77,6 +65,7 @@ terminal: `$ docker-enter docker_node_1`
 
 
 Troubleshooting
+-----------------------
 
 mysql can't run
 sudo ln -s /etc/apparmor.d/usr.sbin.mysqld /etc/apparmor.d/disable/
