@@ -2,7 +2,9 @@ var http = require("http");
 var mysql = require("mysql");
 
 var nconf = require('nconf');
-var configs = nconf.file({ file: 'config.json' });
+var fs = require('fs');
+var config_file = fs.existsSync('config.json') ? 'config.json' : 'config-local.json';
+var configs = nconf.file({ file: config_file });
 
 var connection = mysql.createConnection({
   host     : nconf.get('mysql_host'),

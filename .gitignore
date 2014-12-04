@@ -1,4 +1,4 @@
-/tmp
+/tmp/*
 !/tmp/.gitkeep
 !/tmp/mongo/.gitkeep
 !/tmp/mysql/.gitkeep
