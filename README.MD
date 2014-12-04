@@ -12,30 +12,18 @@ install docker
 
 install docker-enter
 
-Get source
+----------------------------
 
-`$ git clone http://the.repository`
-
-`$ cd repository`
-
-
-Install MYSQL
+`$ git clone https://github.com/lighta971/bitonic && cd bitonic`
 
 `$ cd docker && fig up`
 
-
 `$ docker-enter docker_mysql_1`
-
 
 `$ mysql_install_db && supervisorctl restart mysql`
 
-
 `$ mysql -uroot -e "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '' WITH GRANT OPTION; FLUSH PRIVILEGES;"`
-
-
-Finaly
-
-`$ exit `
+`
 
 Usages
 -------------------------
